@@ -24,4 +24,9 @@ class TweetsController < ApplicationController
   def destroy
   end
   
+  private
+  def tweet_params
+    params.permit(:text)
+  end
+  
 end
