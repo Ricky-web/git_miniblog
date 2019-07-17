@@ -12,4 +12,6 @@ class TweetsController < ApplicationController
   def edit
   end
   
+  def destroy
+  end
 end
