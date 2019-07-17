@@ -23,6 +23,7 @@ class TweetsController < ApplicationController
   end
   
   def update
+    Tweet.update(tweet_params)
   end
   
   def destroy
