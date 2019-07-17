@@ -6,4 +6,6 @@ class TweetsController < ApplicationController
   def create
   end
   
+  def show
+  end
 end
