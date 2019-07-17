@@ -8,6 +8,8 @@ class TweetsController < ApplicationController
   end
   
   def create
+    Tweet.create(tweet_params)
+    redirect_to :root
   end
   
   def show
