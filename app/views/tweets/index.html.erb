@@ -1,0 +1,29 @@
+<header>
+  <div class="brand">
+    <h2>Blog</h2>
+  </div>
+  <div class="header_button">
+    <ul class="sign_button">
+      <% if user_signed_in? %>
+        <li>
+          SignOut
+        </li>
+      <% else %>
+        <li>
+          New
+        </li>
+        <li>
+          SignIn
+        </li>
+      <% end %>
+    </ul>
+    <div class="tweet_button">
+      <%= link_to 'New', new_tweet_path %>
+    </div>
+  </div>
+</header>
+<div class="contents">
+  <% @tweets.each do |tweet| %>
+    <%= render partial: 'tweet', locals: {tweet: tweet} %>
+  <% end %>
+</div>

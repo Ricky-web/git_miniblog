@@ -1,0 +1,18 @@
+<div class="content">
+  <div class="text">
+    <%= tweet.text %>
+  </div>
+  <div class="button">
+    <ul>
+      <li>
+        <%= link_to 'show', tweet_path, method: :get %>
+      </li>
+      <li>
+        <%= link_to 'edit', edit_tweet_path %>
+      </li>
+      <li>
+        <%= link_to 'destroy', tweet_path, method: :delete %>
+      </li>
+    </ul>
+  </div>
+</div>
