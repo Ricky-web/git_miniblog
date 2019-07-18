@@ -6,14 +6,14 @@
     <ul class="sign_button">
       <% if user_signed_in? %>
         <li>
-          SignOut
+          <%= link_to 'SignOut', destroy_user_session_path, method: :delete %>
         </li>
       <% else %>
         <li>
-          New
+          <%= link_to 'New', new_user_registration %>
         </li>
         <li>
-          SignIn
+          <%= link_to 'SignIn', new_user_session %>
         </li>
       <% end %>
     </ul>
