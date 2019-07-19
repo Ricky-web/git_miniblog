@@ -8,10 +8,10 @@
         <%= link_to 'show', tweets_path, method: :get %>
       </li>
       <li>
-        <%= link_to 'edit', edit_tweet_path %>
+        <%= link_to 'edit', "/tweets/#{tweet.id}/edit", method: :get%>
       </li>
       <li>
-        <%= link_to 'destroy', tweet_path, method: :delete %>
+        <%= link_to 'destroy', "/tweets/#{tweet.id}", method: :delete %>
       </li>
     </ul>
   </div>
