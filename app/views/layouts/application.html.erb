@@ -10,6 +10,30 @@
   </head>
 
   <body>
+  <header>
+    <div class="brand">
+      <h2>Blog</h2>
+    </div>
+    <div class="header_button">
+      <ul class="sign_button">
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to 'SignOut', destroy_user_session_path, method: :delete %>
+          </li>
+          <li>
+            <%= link_to 'New', new_tweet_path %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to 'SignUp', new_user_registration_path %>
+          </li>
+          <li>
+            <%= link_to 'SignIn', new_user_session_path %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </header>
     <%= yield %>
   </body>
 </html>
