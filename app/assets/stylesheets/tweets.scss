@@ -1,3 +1,54 @@
-// Place all the styles related to the tweets controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+html, body {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+a {
+  font-size: 22px;
+  text-decoration: none;
+  color: white;
+  margin: 0 15px;
+}
+
+header {
+  height: 80px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #33CC99;
+  
+  .brand {
+    height: 80px;
+    width: 180px;
+    float: left;
+    margin: auto;
+    
+    h2 {
+      line-height: 80px;
+      font-size: 40px;
+      margin: 0 auto;
+      text-align: center;
+      color: white;
+    }
+  }
+  
+  .header_button {
+      height: 24px;
+      width: 180px;
+      padding: 28px 150px 28px 0;
+      float: right;
+      
+      .sign_button {
+        margin: auto;
+        padding: 0;
+        display: flex;
+        
+        li {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+      }
+  }
+}
