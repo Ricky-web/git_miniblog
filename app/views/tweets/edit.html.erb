@@ -1,0 +1,6 @@
+<div class="contents">
+  <%= form_for(@tweet, method: :patch) do %>
+    <textarea name="text" rows="30" cols="60"><%= @tweet.text %></textarea>
+    <input type="submit" value="SENT">
+  <% end %>
+</div>
