@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
   
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.all.order('updated_at DESC')
   end
   
   def new
@@ -29,15 +29,16 @@ class TweetsController < ApplicationController
     if text_confirmation
       redirect_to "/tweets/#{params[:id]}/edit", alert: '▼ Please enter the text.'
     else
-      Tweet.update(tweet_params)
-      redirect_to :root
+      tweet = Tweet.find(params[:id])
+      tweet.update(text: tweet_params[:text])
+      redirect_to :root, alert: '▼ Updated!'
     end
   end
   
   def destroy
     tweet = Tweet.find(params[:id])
     tweet.destroy
-    redirect_to :root
+    redirect_to :root, alert: '▼ Deleted!'
   end
   
   private
