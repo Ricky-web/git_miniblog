@@ -22,6 +22,7 @@ class TweetsController < ApplicationController
   
   def update
     Tweet.update(tweet_params)
+    redirect_to :root
   end
   
   def destroy
