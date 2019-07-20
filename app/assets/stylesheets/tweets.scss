@@ -44,10 +44,15 @@ header {
     
     h2 {
       line-height: 80px;
-      font-size: 40px;
       margin: 0 auto;
       text-align: center;
       color: white;
+      
+      a {
+        margin: 0;
+        font-size: 40px;
+        line-height: 80px;
+      }
     }
   }
   
