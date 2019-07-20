@@ -112,3 +112,16 @@ header {
     color: black;
   }
 }
+
+form {
+  text-align: center;
+  
+  textarea {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  input {
+    margin: 10px 0;
+  }
+}
