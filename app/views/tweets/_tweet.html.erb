@@ -5,7 +5,7 @@
   <div class="button">
     <ul>
       <li>
-        <%= link_to 'show', tweets_path, method: :get %>
+        <%= link_to 'show', "/tweets/#{tweet.id}", method: :get %>
       </li>
       <% if user_signed_in? && tweet.user_id == current_user.id %>
         <li>
