@@ -13,7 +13,7 @@ class TweetsController < ApplicationController
       
     else
       Tweet.create(text: tweet_params[:text], user_id: current_user.id)
-      redirect_to :root
+      redirect_to :root, alert: '▼ Posted!'
     end
   end
   
@@ -36,9 +36,9 @@ class TweetsController < ApplicationController
   end
   
   def destroy
-    tweet = Tweet.find(params[:id])
-    tweet.destroy
-    redirect_to :root, alert: '▼ Deleted!'
+      tweet = Tweet.find(params[:id])
+      tweet.destroy
+      redirect_to :root, alert: '▼ Deleted!'
   end
   
   private
